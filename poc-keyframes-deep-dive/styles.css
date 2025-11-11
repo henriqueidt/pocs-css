@@ -1,0 +1,51 @@
+.with-traditional-fade-out {
+  animation: fadeOut 2s ease-in-out;
+  background-color: lightblue;
+}
+
+.with-omitted-from-keyframe {
+  animation: fadeOutWithoutFrom 2s ease-in-out;
+  background-color: lightgreen;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOutWithoutFrom {
+  to {
+    opacity: 0;
+  }
+}
+
+/* ----------------------------------------------------- */
+
+.with-traditional-fade-in {
+  animation: fadeIn 2s ease-in-out;
+  background-color: lightyellow;
+}
+
+.with-omitted-to-keyframe {
+  animation: fadeInWithoutTo 2s ease-in-out;
+  background-color: lightcoral;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInWithoutTo {
+  from {
+    opacity: 0;
+  }
+}
