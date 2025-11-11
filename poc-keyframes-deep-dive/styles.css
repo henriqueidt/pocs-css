@@ -49,3 +49,27 @@
     opacity: 0;
   }
 }
+
+/* ----------------------------------------------------- */
+
+.with-multiple-keyframes {
+  animation: blinking 1s alternate infinite, fadeIn 5s;
+  background-color: red;
+  width: 150px;
+  height: 150px;
+}
+
+@keyframes blinking {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}

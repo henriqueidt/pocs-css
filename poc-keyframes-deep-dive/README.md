@@ -34,3 +34,30 @@ The same applies to omitting the `to` keyframe. The browser will use the element
   }
 }
 ```
+
+## Using multiple keyframes
+
+If we omit `to` from a keyframe animation, it will set its value to the value of the property of the element being animated, as shown before. If we instead add another keyframe, it will transition into the values specified in that other keyframe.
+
+```css
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes blinking {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.with-multiple-keyframes {
+  animation: blinking 1s alternate infinite, fadeIn 5s;
+}
+```
+
+In this example, the element will fade in from `0` into the changing values of the `blinking` animation, which alternates between `0.5` and `1`.
