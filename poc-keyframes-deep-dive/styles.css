@@ -1,3 +1,12 @@
+.body {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  margin: auto;
+  width: 300px;
+  padding: 20px;
+}
+
 .with-traditional-fade-out {
   animation: fadeOut 2s ease-in-out;
   background-color: lightblue;
@@ -71,5 +80,42 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
+  }
+}
+
+/* ----------------------------------------------------- */
+
+.ball {
+  --background: rgb(186, 186, 186);
+
+  width: 100px;
+  height: 100px;
+  background-color: var(--background);
+  border-radius: 50%;
+  position: relative;
+  animation: colorCycle 2s ease-in-out infinite;
+}
+
+.first-ball {
+  --blinking-color: red;
+}
+
+.second-ball {
+  --blinking-color: yellow;
+}
+
+.third-ball {
+  --blinking-color: green;
+}
+
+@keyframes colorCycle {
+  0% {
+    background-color: var(--background);
+  }
+  50% {
+    background-color: var(--blinking-color);
+  }
+  100% {
+    background-color: var(--background);
   }
 }
