@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="index.js"></script>
+  </head>
+  <body class="body">
+    <div>
+      <h1>POC Logical CSS</h1>
+      <div>
+        <div>
+          <p>
+            When declaring CSS, we can use logical properties to ensure our
+            views are adaptable to different writing modes as screens. The
+            properties are set with logic, rather than physical directions and
+            dimensions.
+          </p>
+          <p>
+            As we are used to regular languages, like portuguese and english,
+            which are written from left to right, top to bottom, there are
+            languages that do not follow that standard. For those languages, it
+            isn't enough to just translate the texts, we also need to adapt the
+            UIs to their writting pattern.
+          </p>
+        </div>
+
+        <div class="boxes" dir="ltr">
+          <div class="box">box 1</div>
+          <div class="box">box 2</div>
+          <div class="box">box 3</div>
+          <div class="box">box 4</div>
+        </div>
+
+        <button class="translate-button">Translate</button>
+      </div>
+    </div>
+  </body>
+</html>

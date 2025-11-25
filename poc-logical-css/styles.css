@@ -1,0 +1,12 @@
+.boxes {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.box {
+  border: 2px solid red;
+}
+
+.box + .box {
+  margin-inline-start: 12px;
+}
